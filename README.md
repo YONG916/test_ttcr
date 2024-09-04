@@ -435,24 +435,24 @@ Set-Location ..  # 这会将当前目录设置为上一级文件夹
 $results = @()
 
 # 循环遍历 secondary nodes 的值从 0 到 10
-for ($sec_nodes = 0; $sec_nodes -le 10; $sec_nodes++) {
+for (secnodes=0;sec_nodes = 0; sec_nodes -le 10; $sec_nodes++) {
     # 更新配置文件中的 secondary nodes 参数
-    (Get-Content $configFile) -replace '^\d+\s+# secondary nodes', "$sec_nodes             # secondary nodes" | Set-Content $configFile
+    (Get-Content configFile) -replace '^\d+\s+# secondary nodes', "configFile) -replace '^\d+\s+# secondary nodes', "sec_nodes             # secondary nodes" | Set-Content $configFile
 
     # 运行程序并记录运行时间
     Write-Output "Running with secondary nodes = $sec_nodes"
     $start_time = Get-Date
 
     # 执行命令并捕获输出
-    $output = & $executable -v -p $configFile -t -k -s
+    output = &output = & executable -v -p $configFile -t -k -s
 
     # 提取包含“Time to build grid”和“Time to perform raytracing”的那一行
-    $gridTimeLine = $output | Select-String -Pattern "Time to build grid:"
-    $raytraceTimeLine = $output | Select-String -Pattern "Time to perform raytracing:"
+    gridTimeLine=gridTimeLine = output | Select-String -Pattern "Time to build grid:"
+    raytraceTimeLine=raytraceTimeLine = output | Select-String -Pattern "Time to perform raytracing:"
 
     # 从中提取实际的时间数值
-    $gridTime = $gridTimeLine -replace '.*Time to build grid:\s+([0-9.]+).*','$1'
-    $gridTime = [double]::Parse($gridTime)
+    gridTime=gridTime = gridTimeLine -replace '.*Time to build grid:\s+([0-9.]+).*','$1'
+    gridTime=[double]::Parse(gridTime = [double]::Parse(gridTime)
     
     $raytraceTime = $raytraceTimeLine -replace '.*time to perform raytracing:\s+([0-9.]+).*','$1'
     $raytraceTime = [double]::Parse($raytraceTime)
@@ -748,7 +748,7 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
   $configFile = ".\model3d.par"  # 使用相对路径或完整路径
   
   # 修改2：每条射线路径的平均运行时间
-  $singleRayPathTime = $totalTime
+  singleRayPathTime=singleRayPathTime = totalTime
   ```
 
 ##### 7.2.1.2. 测试结果
@@ -757,7 +757,7 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
 
 <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409031035119.png" alt="image-20240903103501945" style="zoom: 25%;" />
 
-- 每增加一个次级节点， 运行时间以指数型增长， 不建议在三维模型使用过大的次级节点数量，例如， `secondary nodes` $\leq 1$。 但是， 如下图， 当`secondary nodes = 0`时， 初至走时剖面和射线路径的效果**远不如**`secondary nodes = 1`的效果。
+- 每增加一个次级节点， 运行时间以指数型增长， 不建议在三维模型使用过大的次级节点数量，例如， `secondary nodes` ≤1\leq 1。 但是， 如下图， 当`secondary nodes = 0`时， 初至走时剖面和射线路径的效果**远不如**`secondary nodes = 1`的效果。
 
 - secondary nodes = 0, 
 
@@ -890,7 +890,7 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
 
 <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409032313449.png" alt="image-20240903231316335" style="zoom: 25%;" />
 
-- 当三级节点数量tertiary nodes $\ge$ 7, 运行时间大大增加。但是，如下图， 初至走时剖面和射线路径的结果都较差。建议不要使用这个算法。
+- 当三级节点数量tertiary nodes ≥\ge 7, 运行时间大大增加。但是，如下图， 初至走时剖面和射线路径的结果都较差。建议不要使用这个算法。
 
 - tertiary nodes = 1， src radius tertiary = 1
 
@@ -940,4 +940,4 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
 
 - 动态最短路径法（DSPM）: 过大的`tertiary nodes`和 `src radius tertiary`会增加运行时间， 尤其是当增加三级节点`tertiary nodes`数量会显著影响运行时间。并且， 由于走时场和射线结果较差， 不建议在均匀层状模型中使用这种算法。
 
-- 在三维模型的情况下， 使用**快速扫描法（FSM）**法效率最高，射线追踪结果相对较好。
+- 在三维模型的情况下， 使用**快速扫描法（FSM)**法效率最高，射线追踪结果相对较好。
