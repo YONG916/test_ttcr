@@ -2,7 +2,7 @@
 
 > - 源代码链接：[Github链接](https://github.com/groupeLIAMG/ttcr)
 > - 源代码：C++
-> - 测试demo链接：
+> - 测试demo的链接：[Github链接](https://github.com/YONG916/test_ttcr/tree/master)
 > - 测试环境：使用脚本文件`ps1`执行批量的参数测试；使用`python`执行测试结果可视化。
 > - 电脑配置： 64 位 Windows 10 专业版操作系统，Intel(R) Core(TM) i5-11400 CPU @ 2.60GHz（6 核心 12 线程），内存大小为 16GB。
 
@@ -315,7 +315,7 @@ cmake .. # 编译CMakeList.txt文件
 #### 6.1.1. 数据说明
 
 > - Github中的参数说明：[Github](https://github.com/groupeLIAMG/ttcr/blob/master/docs/command_line.md)
-> - 默认是快速扫描法（FSM）
+> - 默认是最短路径算法（SPM）
 
 | 输入文件                                  | 内容                                                         |
 | ----------------------------------------- | ------------------------------------------------------------ |
@@ -588,7 +588,7 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
 
 ##### 7.1.3.1.初始参数设置
 
-> - 算法：快速扫描算法（FSM）,  只针对SPM有该参数。默认算法迭代次数是20
+> - 算法：快速扫描算法（FSM）,  只针对FSM有该参数。默认算法迭代次数是20
 >
 > - 网格分辨率：（200， 100）
 >
