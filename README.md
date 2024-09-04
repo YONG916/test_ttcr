@@ -499,37 +499,37 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
 
   1. 总运行时间、构建网格的时间、射线追踪运行时间：
 
-  <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021927122.png" alt="image-20240902192750021" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021927122.png" alt="image-20240902192750021" style="zoom: 25%;" />
 
  2. 平均每条射线的运行时间：
 
-    <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021952087.png" alt="image-20240902195245984" style="zoom:50%;" />
+    <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021952087.png" alt="image-20240902195245984" style="zoom: 25%;" />
 
 - 次级节点数量的增加会大大增加运行时间。但是，次级节点数量为0的时候，运行效果很差（如下图所示）， 分界线处没有折射。当Secondary Nodes = 1的时候， 与Secondary Nodes = 10效果类似。因此，对于不同分辨率的模型， 需要找到合适的次级节点数。
 
   > - Secondary Nodes = 0:
   >
-  >   ![image-20240902193655855](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021936944.png)
+  >   <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021936944.png" alt="image-20240902193655855" style="zoom:25%;" />
   >
   > - Secondary Nodes = 1:
   >
-  >   ![image-20240902194632552](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021946637.png)
+  >   <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021946637.png" alt="image-20240902194632552" style="zoom:25%;" />
   >
   > - Secondary Nodes = 2:
   >
-  >   ![image-20240902194728953](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021947038.png)
+  >   <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021947038.png" alt="image-20240902194728953" style="zoom:25%;" />
   >
   >   ...
   >
   > - Secondary Nodes = 10:
   >
-  >   ![image-20240902194128469](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021941554.png)
+  >   <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409021941554.png" alt="image-20240902194128469" style="zoom:25%;" />
 
   
 
 - 接收器的初至走时：
 
-  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022338207.png" alt="image-20240902233826101" style="zoom:50%;" />
+  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022338207.png" alt="image-20240902233826101" style="zoom: 25%;" />
 
 
 
@@ -562,23 +562,23 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
 
   1. 总运行时间、构建网格的时间、射线追踪运行时间：
 
-     <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022100073.png" alt="image-20240902210042938" style="zoom:50%;" />
+     <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022100073.png" alt="image-20240902210042938" style="zoom: 25%;" />
 
   2. 平均每条射线的运行时间：
 
-     <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022102731.png" alt="image-20240902210238614" style="zoom:50%;" />
+     <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022102731.png" alt="image-20240902210238614" style="zoom: 25%;" />
 
 - 在迭代次数在20到100的范围内， FSM方法的运行时间与迭代次数的大小关系不大， 射线路径的寻找效果差不多。
 
   > - Iteration = 20（默认值）:
   >
-  >   ![image-20240902211354183](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022113309.png)
+  >   <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022113309.png" alt="image-20240902211354183" style="zoom:25%;" />
   >
   >   ...
   >
   > - Iteration = 100:
   >
-  >   ![image-20240902205211816](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022052931.png)
+  >   <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022052931.png" alt="image-20240902205211816" style="zoom:25%;" />
 
 - 此结果说明：`epsilon=1e-15` 已经使计算在较早的迭代次数就收敛了。 因此，不需要变化这个参数。
 
@@ -613,7 +613,7 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
   >
   > - 射线路径：
   >
-  >   ![image-20240902212540030](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022125124.png)
+  >   <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022125124.png" alt="image-20240902212540030" style="zoom:25%;" />
 
 - 启用该算子：
 
@@ -621,11 +621,11 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
   >
   > - 射线路径：
   >
-  >   ![image-20240902213223127](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022132222.png)
+  >   <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022132222.png" alt="image-20240902213223127" style="zoom:25%;" />
 
 - 接收器的初至走时：
 
-  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022335012.png" alt="image-20240902233543896" style="zoom:50%;" />
+  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022335012.png" alt="image-20240902233543896" style="zoom: 25%;" />
 
 - 此结果说明， 在二维模型下， 不启用该算子运行速度更快， 且射线路径和初至走时的结果差不多。
 
@@ -662,31 +662,31 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
 
 - 最大运行时间与最小运行时间的差异：0.1862932 s
 
-<img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022244923.png" alt="image-20240902224409602" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022244923.png" alt="image-20240902224409602" style="zoom: 25%;" />
 
 - tertiary nodes = 10的时候的剖面图:
 
-  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022247788.png" alt="image-20240902224742802" style="zoom:50%;" />
+  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022247788.png" alt="image-20240902224742802" style="zoom: 25%;" />
 
 - src radius tertiary = 10 的时候的剖面图:
 
-  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022248893.png" alt="image-20240902224821780" style="zoom:50%;" />
+  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022248893.png" alt="image-20240902224821780" style="zoom: 25%;" />
 
 - 测试射线路径
 
   > - tertiary nodes = 1 , src radius tertiary = 1:
   >
-  >   ![image-20240902225645495](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022256601.png)
+  >   <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022256601.png" alt="image-20240902225645495" style="zoom:25%;" />
   >
   > - tertiary nodes = 10 , src radius tertiary = 10:
   >
-  >   ![image-20240902225124708](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022251814.png)
+  >   <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022251814.png" alt="image-20240902225124708" style="zoom:25%;" />
 
 - 接收器的初至走时：
 
-  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022339021.png" alt="image-20240902233916917" style="zoom:50%;" />
+  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022339021.png" alt="image-20240902233916917" style="zoom: 25%;" />
   >
-  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022318033.png" alt="image-20240902231819913" style="zoom:50%;" />
+  > <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409022318033.png" alt="image-20240902231819913" style="zoom: 25%;" />
 
 - 初至走时的差异不到0.001， 说明`tertiary nodes = 1 , src radius tertiary = 1`是可行的， 并且运行时间更短。
 
@@ -755,7 +755,7 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
 
 <img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409031030948.png" alt="image-20240903103005815" style="zoom:50%;" />
 
-<img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409031035119.png" alt="image-20240903103501945" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409031035119.png" alt="image-20240903103501945" style="zoom: 25%;" />
 
 - 每增加一个次级节点， 运行时间以指数型增长， 不建议在三维模型使用过大的次级节点数量，例如， `secondary nodes` $\leq 1$。 但是， 如下图， 当`secondary nodes = 0`时， 初至走时剖面和射线路径的效果**远不如**`secondary nodes = 1`的效果。
 
@@ -886,9 +886,9 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
 
 
 
-![image-20240903231217835](https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409032312952.png)
+<img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409032312952.png" alt="image-20240903231217835" style="zoom:25%;" />
 
-<img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409032313449.png" alt="image-20240903231316335" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/YONG916/cloudimg1/main/img5202409032313449.png" alt="image-20240903231316335" style="zoom: 25%;" />
 
 - 当三级节点数量tertiary nodes $\ge$ 7, 运行时间大大增加。但是，如下图， 初至走时剖面和射线路径的结果都较差。建议不要使用这个算法。
 
@@ -941,23 +941,3 @@ $results | Export-Csv -Path ".\TestResult\runtime_results.csv" -NoTypeInformatio
 - 动态最短路径法（DSPM）: 过大的`tertiary nodes`和 `src radius tertiary`会增加运行时间， 尤其是当增加三级节点`tertiary nodes`数量会显著影响运行时间。并且， 由于走时场和射线结果较差， 不建议在均匀层状模型中使用这种算法。
 
 - 在三维模型的情况下， 使用**快速扫描法（FSM）**法效率最高，射线追踪结果相对较好。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 76a4ae9 (test ttcr)
