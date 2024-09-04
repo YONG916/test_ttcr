@@ -1,0 +1,17 @@
+model3d        	# basename,
+model3d.grd    	# modelfile,
+model3d.slo    	# slofile,
+src1.dat       	# srcfile,
+rcv.dat        	# rcvfile,
+1		# saveGridTT,
+
+0		# secondary nodes,
+
+0		# fast sweeping,
+20 		# max number of iteration,
+0		# fsm high order,
+
+1		# dynamic shortest path,
+1           # tertiary nodes,
+1            # src radius tertiary,
+

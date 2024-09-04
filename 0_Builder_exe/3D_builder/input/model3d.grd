@@ -1,0 +1,3 @@
+50 50 50	# number of cells,
+1 1 1 	# size of cells,
+0 0 0 	# origin of grid,
